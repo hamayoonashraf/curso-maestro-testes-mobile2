@@ -14,6 +14,6 @@ env:
 ---
 - launchApp:
     clearState: true
-- runFlow: subflows\login.yaml
-- runFlow: subflows\prod-catalog.yaml
-- runFlow: subflows\cart-checkout.yaml
+- runFlow: subflows/login.yaml
+- runFlow: subflows/prod-catalog.yaml
+- runFlow: subflows/cart-checkout.yaml
