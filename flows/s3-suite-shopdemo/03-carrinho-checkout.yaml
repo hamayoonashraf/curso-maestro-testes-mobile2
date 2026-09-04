@@ -1,0 +1,53 @@
+appId: com.curso.shopdemo
+---
+- launchApp:
+    clearState: true
+- tapOn: "E-mail"
+- inputText: "cliente@shopdemo.com"
+- tapOn: "Senha"
+- inputText: "123456"
+- hideKeyboard
+- tapOn:
+    id: "btn-entrar"
+- extendedWaitUntil:
+    visible: "tela-catalogo"
+    timeout: 40000
+- assertVisible:
+    id: "tela-catalogo"
+
+- tapOn: "Fone de Ouvido Bluetooth"
+
+- tapOn: "btn-adicionar"
+- assertVisible: "Produto adicionado com sucesso!"
+- tapOn:
+    id: "btn-ver-carrinho"
+- assertVisible: "R$ 159,90"
+- assertVisible: "Total: R$ 159,90"
+
+- assertVisible:
+    id: "btn-finalizar"
+    enabled: true
+
+- tapOn:
+    id: "btn-finalizar"
+
+- tapOn:
+    id: "input-nome"
+- inputText: "A"
+- tapOn:
+    id: "input-endereco"
+- inputText: "B"
+- tapOn:
+    id: "input-cartao"
+- inputText: "C"
+- hideKeyboard
+
+
+- assertVisible:
+    id: "btn-confirmar"
+- tapOn:
+    id: "btn-confirmar"
+- assertVisible: "Pedido confirmado"
+- assertVisible: "Pedido #.*"
+
+
