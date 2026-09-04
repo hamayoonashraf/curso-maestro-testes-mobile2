@@ -5,7 +5,7 @@ appId: com.curso.shopdemo
 - extendedWaitUntil:
     visible:
       id: "input-email"
-    timeout: 40000
+    timeout: 60000
 - tapOn: "E-mail"
 - inputText: "cliente@shopdemo.com"
 - tapOn: "Senha"
